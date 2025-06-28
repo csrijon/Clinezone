@@ -1,0 +1,152 @@
+/* Container for the entire section */
+.feature-section {
+  display: flex;
+  overflow: hidden;
+  background-color: #000;
+  color: white;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+
+/* Left panel — fixed position style */
+.feature-left {
+  flex: 0 0 40%;
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  height: 418px;
+  width: 558px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #2f29fc;
+  border-radius: 10px;
+  margin: 2rem;
+  z-index: 10;
+  background-color: #000;
+}
+
+.feature-left h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.feature-left p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.get-started {
+  background-color: #2f29fc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.get-started:hover {
+  background-color: #1c18d4;
+}
+
+/* Right panel — scrollable area */
+.feature-right {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  padding: 2rem;
+}
+
+/* Each card */
+.feature-card {
+  scroll-snap-align: start;
+  height: 350px;
+  width: 558px;
+  background-color: #111;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #444;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #ccc;
+}
+
+/* Optional: Smooth scrolling */
+.feature-right {
+  scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+  .feature-section {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .feature-left {
+    position: relative;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .feature-right {
+    height: auto;
+    padding: 0 1rem;
+  }
+
+  .feature-card {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    box-sizing: border-box;
+  }
+
+  .feature-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .feature-left p,
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .get-started {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+}
