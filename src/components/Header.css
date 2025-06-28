@@ -1,0 +1,93 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: sticky;
+    width: 100vw;
+    height: 60px;
+    background-color: black;
+    color: white;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #bbbbbb;
+}
+
+/* Button */
+.onboard-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, hsla(248, 93%, 24%, 1), hsla(248, 94%, 44%, 1));
+    color: white;
+    height: 40px;
+    padding: 11px 44px 11px 44px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px #1e3a8a;
+    transition: opacity 0.3s ease;
+}
+
+.onboard-btn:hover {
+    opacity: 0.9;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .onboard-btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
