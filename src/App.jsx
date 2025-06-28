@@ -2,6 +2,7 @@
 import './App.css'
 import Header from './components/Header'
 import OrbitSystem from './components/OrbitSystem'
+import StatsSection from './components/StatsSection'
 
 function App() {
   
@@ -10,6 +11,7 @@ function App() {
     <>
      <Header/>
      <OrbitSystem/>
+     <StatsSection/>
     </>
   )
 }
