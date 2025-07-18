@@ -1,0 +1,9 @@
+.simple{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 30px;
+    font-size: 25px;
+    font-weight: 600;
+}

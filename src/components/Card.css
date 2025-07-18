@@ -1,0 +1,83 @@
+.main-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 30px;
+  gap: 20px;
+}
+
+.uppercard {
+  display: flex;
+  gap: 30px;
+}
+
+.spoke {
+  align-items: center;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 30px;
+}
+
+.lowercase {
+  display: flex;
+  gap: 30px;
+}
+/* ✅ Existing responsiveness for medium screens */
+@media (max-width: 1049px) {
+  .uppercard,
+  .lowercase {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-card {
+    margin: 20px;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .spoke {
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+/* ✅ Added responsiveness for tablets and small laptops */
+@media (max-width: 768px) {
+  .main-card {
+    padding: 10px;
+    margin: 15px;
+    gap: 10px;
+  }
+
+  .uppercard,
+  .lowercase {
+    gap: 20px;
+  }
+
+  .spoke {
+    font-size: 20px;
+    padding: 20px 10px;
+  }
+}
+
+/* ✅ Added responsiveness for mobile phones */
+@media (max-width: 480px) {
+  .main-card {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .uppercard,
+  .lowercase {
+    gap: 15px;
+  }
+
+  .spoke {
+    font-size: 18px;
+    padding: 15px 5px;
+  }
+}
+

@@ -6,19 +6,21 @@
 }
 
 .header {
-    position: sticky;
-    width: 100vw;
-    height: 60px;
-    background-color: black;
-    color: white;
-    padding: 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+  position: fixed;           /* 🔁 changed from sticky to fixed */
+  top: 0;                    /* ✅ fix it to the top */
+  left: 0;                   /* ✅ ensure it stretches full width */
+  width: 100vw;
+  height: 60px;
+  background-color: black;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;             /* ✅ ensure it stays above other elements */
 }
 
-/* Logo */
+
 .logo {
     font-size: 22px;
     font-weight: bold;

@@ -20,7 +20,6 @@ const steps = [
 const ScrollCards = () => {
   return (
     <div className="scroll-container">
-             <div className="text">simple text to subject</div>
       {steps.map((step, index) => (
         <div className="scroll-card" key={index}>
           <h3>{step.title}</h3>
