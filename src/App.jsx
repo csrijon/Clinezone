@@ -15,25 +15,20 @@ import HoverCard from './components/HoverCard'
 import ServicesSection from './components/ServicesSection'
 import ContactForm from './components/ContactForm'
 import Contacct from './components/Contacct'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 function App() {
   
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element : <><Header/><OrbitSystem/><StatsSection/> <FeatureSection/><Simple/><ScrollCards/> <Card/><CTASection/><Footer/></>
+    }
+  ])
 
   return (
     <>
-     <Header/>
-     <OrbitSystem/>
-     <StatsSection/>
-     <FeatureSection/>
-     <Simple/>
-     <ScrollCards/>
-     <Card/>
-     <CTASection/>
-     <Divider/>
-     <HoverCard/>
-     <Footer/>
-     <ContactForm/>
-     <Contacct/>
+    < RouterProvider router={router}/>
     </>
   )
 }

@@ -66,6 +66,14 @@
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   padding: 2rem;
+
+  /* Hide scrollbar in WebKit (Chrome, Edge, Safari) */
+  scrollbar-width: none;            /* Firefox */
+  -ms-overflow-style: none;         /* IE and Edge */
+}
+
+.feature-right::-webkit-scrollbar {
+  display: none;                    /* Chrome, Safari, Opera */
 }
 
 /* Each card */
